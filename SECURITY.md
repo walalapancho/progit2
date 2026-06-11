@@ -1,5 +1,4 @@
-## Reporting a security issue
+## Notificación de una vulnerabilidad de seguridad
+En caso de identificar alguna incidencia o vulnerabilidad de seguridad, por favor remita su informe a [ben@straub.cc](mailto:ben@straub.cc).
 
-If you find any security issue or vulnerability, please email [ben@straub.cc](mailto:ben@straub.cc) with your report.
-
-Do not open a issue on the `progit/progit2` repository or discuss the vulnerability in public.
+No cree un *issue* en el repositorio `progit/progit2` ni discuta la vulnerabilidad en espacios públicos.

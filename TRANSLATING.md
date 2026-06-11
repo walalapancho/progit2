@@ -1,24 +1,24 @@
-# Translating Pro Git (2nd Edition)
+# Traducción de Pro Git (2ª Edición)
 
-The translations are managed in a decentralized way. Each translation team maintains their own project. Each translation is in its own repository, the Pro Git team simply pulls the changes and builds them into the https://git-scm.com website when ready.
+Las traducciones se gestionan de manera descentralizada. Cada equipo de traducción mantiene su propio proyecto. Cada traducción reside en un repositorio independiente; el equipo de Pro Git simplemente extrae los cambios y los compila en el sitio web https://git-scm.com cuando estén listos.
 
-## General guidance for translating Pro Git
+## Guía general para la traducción de Pro Git
 
-Pro Git is a book about a technical tool, therefore translating it is difficult compared to a non-technical translation.
+Pro Git es un libro sobre una herramienta técnica, por lo que traducirlo resulta más complejo comparado con una traducción no técnica.
 
-The following are guidelines to help you on your way:
-* Before you begin, read the whole Git Pro book in English, so that you're aware of the content, and are familiar with the style used.
-* Ensure you have a good working knowledge of Git, so that explaining the technical terms is doable.
-* Stick to a common style and format for the translation.
-* Be sure to read and understand the basics of [Asciidoc formatting](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/). Not following the asciidoc syntax can lead to problems with building/compilation of the pdf, epub and html files needed for the book.
+Los siguientes son lineamientos para guiarle:
+* Antes de comenzar, lea el libro completo de Git Pro en inglés, para estar al tanto del contenido y familiarizarse con el estilo empleado.
+* Asegúrese de tener un conocimiento práctico sólido de Git, para que la explicación de los términos técnicos sea factible.
+* Manténgase adherido a un estilo y formato consistentes para toda la traducción.
+* Revise y comprenda los conceptos básicos del formateo [Asciidoc](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/). No seguir la sintaxis de AsciiDoc puede provocar problemas con la construcción/compilación de los archivos pdf, epub y html necesarios para el libro.
 
-## Translating the book to another language
+## Traducción del libro a otro idioma
 
-### Helping with a existing project
+### Colaboración en un proyecto existente
 
-* Check for an already existing project in the following table.
-* Go to the project's page on GitHub.
-* Open an issue, introduce yourself and ask where you can help.
+* Consulte si ya existe un proyecto listado en la siguiente tabla.
+* Acceda a la página del proyecto en GitHub.
+* Cree un *issue*, preséntese e indique dónde puede colaborar.
 
 | Language     | GitHub page     |
 | :------------- | :------------- |
@@ -52,46 +52,46 @@ The following are guidelines to help you on your way:
 | 简体中文  | [progit/progit2-zh](https://github.com/progit/progit2-zh) |
 | 正體中文  | [progit/progit2-zh-tw](https://github.com/progit/progit2-zh-tw) |
 
-### Starting a new translation
+### Inicio de una traducción nueva
 
-If there is no project for your language, you can start your own translation.
+Si no existe un proyecto para su idioma, puede iniciar su propia traducción.
 
-Base your work on the second edition of the book, available [here](https://github.com/progit/progit2). To do so:
- 1. Pick the correct [ISO 639 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for your language.
- 1. Create a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), for example: `progit2-[your code]` on GitHub.
- 1. Create a project `progit2`.
- 1. Copy the structure of progit/progit2 (this project) in your project and start translating.
+Base su trabajo en la segunda edición del libro, disponible [aquí](https://github.com/progit/progit2). Para hacerlo:
+ 1. Seleccione el código correcto según [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) para su idioma.
+ 2. Cree una [organización de GitHub](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), por ejemplo: `progit2-[su código]` en GitHub.
+ 3. Cree un proyecto llamado `progit2`.
+ 4. Copie la estructura de progit/progit2 (este proyecto) a su proyecto y comience con la traducción.
 
-### Updating the status of your translation
+### Actualización del estado de su traducción
 
-On https://git-scm.com, the translations are divided into three categories. Once you have reached one of these levels, contact the maintainers of https://git-scm.com/ so that they can pull the changes.
+En https://git-scm.com, las traducciones están divididas en tres categorías. Una vez que alcance uno de estos niveles, contacte a los mantenedores de https://git-scm.com/ para que puedan extraer (pull) los cambios.
 
 | Category | Completion     |
 | :------------- | :------------- |
-| Translation started for | Introduction translated, not much else. |
+| Translation started for | Introduction translated, no much else. |
 | Partial translations available in | up to chapter 6 has been translated. |
 | Full translation available in |the book is (almost) fully translated. |
 
-## Continuous integration with GitHub Actions
+## Integración Continua con GitHub Actions
 
-GitHub Actions is a [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) service that integrates with GitHub. GitHub Actions is used to ensure that a pull-request doesn't break the build or compilation. GitHub Actions can also provide compiled versions of the book.
+GitHub Actions es un servicio de [integración continua](https://en.wikipedia.org/wiki/Continuous_integration) que se integra con GitHub. GitHub Actions se utiliza para garantizar que una *pull-request* no rompa la compilación ni el proceso de *build*. GitHub Actions también puede proporcionar versiones compiladas del libro.
 
-The configuration for GitHub Actions is contained in the `.github/workflows` directory, and if you bring in the `main` branch of the root repository you'll get them for free.
-However, if you created your translation repo by _forking_ the root repo, there's an extra step you must complete (if you did not fork, you can skip this part).
-GitHub assumes that forks will be used to contribute to the repo from which they were forked, so you'll have to visit the "Actions" tab on your forked repo, and click the "I understand my workflows" button to allow the actions to run.
+La configuración de GitHub Actions se encuentra en el directorio `.github/workflows`, y si trae la rama `main` del repositorio principal, obtendrá las acciones de forma gratuita.
+Sin embargo, si creó su repo de traducción mediante *fork* del repo raíz, debe completar un paso adicional (si no hizo *fork*, puede saltarse esta parte).
+GitHub asume que los *forks* se utilizarán para contribuir al repo desde el cual fueron creados; por lo tanto, deberá visitar la pestaña "Actions" en su repo *forkeado* y hacer clic en el botón "I understand my workflows" para permitir la ejecución de las acciones.
 
-## Setting up a publication chain for e-books
+## Configuración de una cadena de publicación para e-books
 
-This is a technical task, please ping @jnavila to get started with epub publication.
+Esta es una tarea técnica; por favor contacte a @jnavila para empezar con la publicación en formato epub.
 
-## Beyond Pro Git
+## Más allá de Pro Git
 
-Translating the book is the first step. Once this is finished, you could consider translating the user interface of Git itself.
+Traducir el libro es el primer paso. Una vez finalizado, podría considerar traducir la interfaz de usuario (UI) de Git en sí mismo.
 
-This task requires a more technical knowledge of the tool than the book. Hopefully, after having translated the full book content, you can understand the terms used in the application. If you feel technically up to the task, the repo is [here](https://github.com/git-l10n/git-po) and you just have to follow the [guide](https://github.com/git-l10n/git-po/blob/master/po/README.md).
+Esta tarea requiere un conocimiento técnico más profundo de la herramienta que el del libro. Ojalá que, tras haber traducido el contenido completo del libro, pueda comprender los términos empleados en la aplicación. Si se siente técnicamente capacitado para ello, el repo es [aquí](https://github.com/git-l10n/git-po) y solo tiene que seguir la [guía](https://github.com/git-l10n/git-po/blob/master/po/README.md).
 
-Beware though that
+Tenga cuidado, sin embargo, de que:
 
- * you'll need to use more specific tools to manage localization po files (such as editing them with [poedit](https://poedit.net/)) and merging them. You might need to compile git in order to check your work.
- * a basic knowledge of how translating applications works is required, which is significantly different from translating books.
- * the core Git project uses more stringent [procedures](https://github.com/git-l10n/git-po/blob/master/Documentation/SubmittingPatches) to accept contributions, be sure to abide by them.
+ * necesitará utilizar herramientas más específicas para gestionar los archivos po de localización (como editarlos con [poedit](https://poedit.net/)) y fusionarlos (*merge*). Podría ser necesario compilar `git` para verificar su trabajo.
+ * se requiere un conocimiento básico sobre cómo funciona la traducción de aplicaciones, lo cual es significativamente diferente a traducir libros.
+ * el proyecto central de Git utiliza [procedimientos](https://github.com/git-l10n/git-po/blob/master/Documentation/SubmittingPatches) más estrictos para aceptar contribuciones; asegúrese de cumplirlos.
